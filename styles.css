@@ -1,0 +1,165 @@
+@font-face {
+  font-family: Cursed Timer;
+  src: url("resources/fonts/CursedTimerUlil-Aznm.ttf");
+}
+
+:root {
+  --color-white: hsl(0, 0%, 93%);
+  --color-black: hsl(267, 7%, 12%);
+  --color-score: hsl(358, 100%, 67%);
+  --color-score--leader: hsl(83, 68%, 47%);
+  --color-cta: linear-gradient(hsl(267, 72%, 63%), hsl(267, 82%, 53%));
+  --color-cta--hover: linear-gradient(hsl(267, 82%, 53%), hsl(267, 92%, 43%));
+}
+
+html,
+body,
+main {
+  height: 100%; /* To center the scorecard vertically & horizontally to the viewport */
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  background: url("resources/images/background.jpg");
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.highlight {
+  color: var(--color-score--leader) !important;
+}
+
+.scorecard-container {
+  display: flex;
+  justify-content: space-around;
+  background: var(--color-white);
+  border-radius: 5px;
+  width: 575px;
+  height: 385px;
+}
+
+.scorecard-title-h2 {
+  margin: 68px 0 21px 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 35.893px;
+}
+
+.points-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  height: 120px;
+  background: var(--color-black);
+  border-radius: 5px;
+  margin-bottom: 26px;
+}
+
+.points {
+  width: 117px;
+  height: 120px;
+  margin: 0;
+  color: var(--color-score);
+  font-family: Cursed Timer, sans-serif;
+  font-size: 90px;
+  line-height: 126.666px;
+}
+
+.points-label {
+    text-align: left;
+    font-weight: 500;
+    line-height: 0;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 9px;
+}
+
+.btn,
+.cta-btn {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid transparent;
+  background: transparent;
+}
+
+.btn:hover {
+  border: 2px solid var(--color-black);
+}
+
+.cta-btn {
+  position: relative;
+  width: auto;
+  height: auto;
+  border: none;
+  padding: 16px 32px;
+  background: var(--color-cta);
+  color: var(--color-white);
+}
+
+.cta-btn:hover {
+  bottom: 4px;
+  transform: scale(1.1);
+  background: var(--color-cta--hover);
+  color: var(--color-white);
+}
+
+.btn-text {
+  width: 30px;
+  height: 25.767px;
+  flex-shrink: 0;
+  font-family: Cursed Timer, sans-serif;
+  font-size: 18px;
+  letter-spacing: -5px;
+  line-height: 27.812px;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 0px 16px 0 16px;
+    gap: 0;
+  }
+  .scorecard-container {
+    width: 100%;
+    height: auto;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 16px 0;
+    border-radius: 5px 5px 0 0;
+  }
+  .scorecard-title-h2 {
+    margin: 8px 0;
+  }
+  .cta-btn {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+  .cta-btn:hover {
+    transform: none;
+    bottom: 0;
+  }
+}

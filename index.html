@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scorecard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="scorecard-container">
+        <div id="container-home">
+          <h2 class="scorecard-title-h2">HOME</h2>
+          <div class="points-container">
+            <p id="home-points" class="points">0</p>
+          </div>
+          <p class="points-label">Add points:</p>
+          <div class="buttons-container">
+            <button id="home-btn--1" class="btn" value="1">
+              <span class="btn-text">+ 1</span>
+            </button>
+            <button id="home-btn--2" class="btn" value="2">
+              <span class="btn-text">+ 2</span>
+            </button>
+            <button id="home-btn--3" class="btn" value="3">
+              <span class="btn-text">+ 3</span>
+            </button>
+          </div>
+        </div>
+        <div id="container-guest">
+          <h2 class="scorecard-title-h2">GUEST</h2>
+          <div class="points-container">
+            <p id="guest-points" class="points">0</p>
+          </div>
+          <p class="points-label">Add points:</p>
+          <div class="buttons-container">
+            <button id="guest-btn--1" class="btn" value="1">
+              <span class="btn-text">+ 1</span>
+            </button>
+            <button id="guest-btn--2" class="btn" value="2">
+              <span class="btn-text">+ 2</span>
+            </button>
+            <button id="guest-btn--3" class="btn" value="3">
+              <span class="btn-text">+ 3</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button id="new-game-btn" class="cta-btn">NEW GAME</button>
+    </main>
+  </body>
+</html>
