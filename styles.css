@@ -15,7 +15,7 @@
 html,
 body,
 main {
-  height: 100%; /* To center the scorecard vertically & horizontally to the viewport */
+  height: 100%; /* To center the scoreboard vertically & horizontally to the viewport */
 }
 
 body {
@@ -38,7 +38,7 @@ main {
   color: var(--color-score--leader) !important;
 }
 
-.scorecard-container {
+.scoreboard-container {
   display: flex;
   justify-content: space-around;
   background: var(--color-white);
@@ -47,7 +47,7 @@ main {
   height: 385px;
 }
 
-.scorecard-title-h2 {
+.scoreboard-title-h2 {
   margin: 68px 0 21px 0;
   font-size: 40px;
   font-weight: 700;
@@ -76,9 +76,9 @@ main {
 }
 
 .points-label {
-    text-align: left;
-    font-weight: 500;
-    line-height: 0;
+  text-align: left;
+  font-weight: 500;
+  line-height: 0;
 }
 
 .buttons-container {
@@ -141,7 +141,7 @@ main {
     padding: 0px 16px 0 16px;
     gap: 0;
   }
-  .scorecard-container {
+  .scoreboard-container {
     width: 100%;
     height: auto;
     flex-flow: column;
@@ -151,7 +151,7 @@ main {
     padding: 16px 0;
     border-radius: 5px 5px 0 0;
   }
-  .scorecard-title-h2 {
+  .scoreboard-title-h2 {
     margin: 8px 0;
   }
   .cta-btn {
