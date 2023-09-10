@@ -3,13 +3,8 @@ let guestScore = 0;
 
 /* Passes in the team and score logged from the event listener */
 function add(team, num) {
-  num = parseInt(num); // Ensures the "num" is a number
-  if (team === "home") {
-    homeScore += num;
-    console.log(homeScore);
-  } else {
-    guestScore += num;
-  }
+  num = +num; // Ensures the "num" is a number
+  team === "home" ? (homeScore += num) : (guestScore += num);
   render();
 }
 
@@ -39,7 +34,7 @@ function showLeader(home, guest) {
 function resetScores() {
   homeScore = 0;
   guestScore = 0;
-  render(homeScore, guestScore);
+  render();
 }
 
 /* 
@@ -50,11 +45,8 @@ document.querySelectorAll(".btn").forEach((btn) =>
   btn.addEventListener("click", (e) => {
     const clickedEl = e.target;
     const clickedElValue = clickedEl.value;
-    if (clickedEl.id.includes("home")) {
-      add("home", clickedElValue);
-    } else {
-      add("guest", clickedElValue);
-    }
+    const myTeam = clickedEl.id.includes("home") ? "home" : "guest";
+    add(myTeam, clickedElValue);
   })
 );
 
